@@ -50,6 +50,13 @@ async def add(ctx, task):
 async def add_error(ctx, error):
     await ctx.send("You must enter a task after *add* command...")
 
+@client.command()
+async def commands(ctx):
+    response = ("!add <Task_to_add>\n"
+                "!show <Task_to_show>\n"
+                "!done <Number_of_completed_task>")
+
+    await ctx.send(response)
 
 @client.command()
 async def show(ctx):
